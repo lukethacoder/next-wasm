@@ -1,0 +1,21 @@
+[package]
+name = "add"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+custom-elements = { workspace = true }
+wasm-bindgen.workspace = true
+web-sys = { workspace = true, features = [
+  "Window",
+  "Document",
+  "HtmlElement",
+  "Node",
+  "Text",
+  "EventTarget",
+  "MouseEvent"
+] }

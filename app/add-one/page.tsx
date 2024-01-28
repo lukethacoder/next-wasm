@@ -1,6 +1,10 @@
-import Link from "next/link";
+import RustAdd from "@/components/RustAdd";
+import UseEffectLoad from "@/components/UseEffectLoad";
 
-export default function Home() {
+// @ts-ignore
+// import { add_one } from "../wasm/components/add/add";
+
+export default function AddOnePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -20,12 +24,17 @@ export default function Home() {
       </div>
 
       <section className="w-full flex gap-8 justify-center">
-        <Link href='/uuid' className="border border-slate-700 p-4 hover:bg-slate-900">
-          /uuid
-        </Link>
-        <Link href='/add-one' className="border border-slate-700 p-4 hover:bg-slate-900">
-          /add-one
-        </Link>
+        {/* <div className="border border-slate-700 p-4">
+          JS import: {add_one(10)}
+        </div> */}
+
+        <div className="border border-slate-700 p-4">
+          RustAdd: <RustAdd number={2} />
+        </div>
+
+        <div className="border border-slate-700 p-4">
+          <UseEffectLoad number={3} />
+        </div>
       </section>
 
       <footer></footer>

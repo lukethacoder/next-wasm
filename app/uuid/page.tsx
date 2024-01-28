@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Uuid from "@/components/Uuid";
 
-export default function Home() {
+export default function UuidPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -20,12 +20,9 @@ export default function Home() {
       </div>
 
       <section className="w-full flex gap-8 justify-center">
-        <Link href='/uuid' className="border border-slate-700 p-4 hover:bg-slate-900">
-          /uuid
-        </Link>
-        <Link href='/add-one' className="border border-slate-700 p-4 hover:bg-slate-900">
-          /add-one
-        </Link>
+        <div className="border border-slate-700 p-4">
+          Uuid: <Uuid />
+        </div>
       </section>
 
       <footer></footer>
