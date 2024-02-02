@@ -11,3 +11,19 @@
   </p>
 </div>
 
+## Installation
+
+Make sure you have [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) installed.
+
+Install Dependencies
+
+```
+cargo build
+```
+
+## Compile WASM
+
+Rust components can be compiled to WASM using the scripts in `package.json`:
+
+- `pn rust:add` || `wasm-pack build --out-dir ../../../wasm/components/add rust/components/add`
+- `pn rust:uuid` || `wasm-pack build --out-dir ../../../wasm/components/uuid rust/components/uuid`
